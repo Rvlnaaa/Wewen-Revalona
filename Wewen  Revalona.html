@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT Freeport Indonesia</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: url("fr.jpg") no-repeat center center fixed;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .header {
+        background: rgb(38, 38, 114);
+        color: black;
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .navbar {
+        clear: both;
+        justify-content: center;
+        background: rgba(85, 45, 179, 0.8);
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 80px; /* Adjusted to position below the header */
+        left: 0;
+        z-index: 1000;
+      }
+
+      .navbar a {
+        color: rgb(247, 247, 247);
+        text-decoration: none;
+        padding: 14px 20px;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+
+      .navbar a:hover {
+        background: crimson;
+        border-radius: 5px;
+      }
+
+      .content {
+        text-align: center;
+        padding: 100px 20px;
+        color: white;
+        margin-top: 100px; /* Added margin to prevent overlap with navbar */
+      }
+
+      .content h1 {
+        color: black; /* Set color for the h1 element */
+      }
+
+      .content p {
+        color: black; /* Set color for the p element */
+      }
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .section h2 {
+        color: black; /* Ubah warna judul menjadi hitam */
+        font-weight: bold; /* Tebalkan judul */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+          0 0 10px rgba(255, 255, 255, 0.6); /* Efek sinar */
+      }
+
+      .section p {
+        color: black; /* Ubah warna teks menjadi hitam */
+        font-weight: bold; /* Tebalkan teks */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+          0 0 10px rgba(255, 255, 255, 0.6); /* Efek sinar */
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(0);
+        }
+        25% {
+          transform: translate(-5px, 5px);
+        }
+        50% {
+          transform: translate(5px, -5px);
+        }
+        75% {
+          transform: translate(-5px, -5px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease; /* Smooth transition for movement */
+      }
+
+      .image-container img:hover {
+        animation: shake 0.5s; /* Apply shake animation on hover */
+      }
+      .image-container img.moved {
+        transform: translateX(100px); /* Move image to the right */
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .navbar a {
+          display: block;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>PT FREEPORT INDONESIA</h1>
+    </header>
+
+    <nav class="navbar">
+      <a href="https://ptfi.co.id/en/about">About Us</a>
+      <a href="https://ptfi.co.id/en/csr">Sustainability</a>
+      <a href="https://ptfi.co.id/en/media">Media</a>
+      <a href="https://ptfi.co.id/en/career">Career</a>
+    </nav>
+
+    <div class="content">
+      <h1 style="color: black">Welcome to PT Freeport Indonesia</h1>
+      <!-- Changed color to black -->
+      <p style="color: black">
+        We strive to bring sustainable development and opportunities for
+        Indonesia.
+      </p>
+    </div>
+
+    <div class="section" id="about">
+      <h2>About Us</h2>
+      <p>
+        PT Freeport Indonesia is a leading mining company in Indonesia, known
+        for its commitment to sustainable practices and responsible resource
+        extraction. We operate one of the largest copper and gold mines in the
+        world, contributing significantly to the local economy and community
+        development.
+      </p>
+      <div class="image-container" onclick="moveImage(this)">
+        <img src="pt.jpg" alt="About Us" />
+      </div>
+    </div>
+
+    <div class="section" id="sustainability">
+      <h2>Sustainability</h2>
+      <p>
+        Our sustainability initiatives focus on minimizing environmental impact
+        while maximizing benefits for local communities. We are dedicated to
+        responsible mining practices, ensuring that our operations contribute
+        positively to the environment and society.
+      </p>
+      <div class="image-container" onclick="moveImage(this)">
+        <img src="tb.webp" alt="Sustainability" />
+      </div>
+    </div>
+
+    <div class="section" id="media">
+      <h2>Media</h2>
+      <p>
+        Stay updated with the latest news, events, and reports from PT Freeport
+        Indonesia. We believe in transparency and actively share information
+        about our operations, community engagement, and sustainability efforts.
+      </p>
+      <div class="image-container" onclick="moveImage(this)">
+        <img src="med.jpg" alt="Media" />
+      </div>
+    </div>
+
+    <div class="section" id="career">
+      <h2>Career</h2>
+      <p>
+        Join our team and be a part of a global leader in the mining industry.
+        We offer various career opportunities and are committed to developing
+        our employees' skills and talents. Explore our job openings and find
+        your place in our dynamic organization.
+      </p>
+      <div class="image-container" onclick="moveImage(this)">
+        <img src="kar.webp" alt="Career" />
+      </div>
+    </div>
+  </body>
+</html>
